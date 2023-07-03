@@ -490,6 +490,18 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     return initializingCompleter.future;
   }
 
+  dynamic? getVideoTracks(){
+    return _videoPlayerPlatform.getVideoTracks(_textureId);
+  }
+
+  Future setVideoTrack(int trackIndex){
+    return _videoPlayerPlatform.setVideoTrack(_textureId, trackIndex);
+  }
+
+  Future setMaxBufferLength(Duration maxLength){
+    return _videoPlayerPlatform.setMaxBufferLength(_textureId,maxLength);
+  }
+
   @override
   Future<void> dispose() async {
     if (_isDisposed) {

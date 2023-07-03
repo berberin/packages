@@ -102,6 +102,21 @@ abstract class VideoPlayerPlatform extends PlatformInterface {
   Future<void> setMixWithOthers(bool mixWithOthers) {
     throw UnimplementedError('setMixWithOthers() has not been implemented.');
   }
+
+  /// Return list quality height available
+  List<int> getVideoTracks(int textureId){
+    throw UnimplementedError('getVideoTracks() has not been implemented.');
+  }
+
+  /// Set quality
+  Future<void> setVideoTrack(int textureId, int trackIndex){
+    throw UnimplementedError('setTrack() has not been implemented.');
+  }
+
+  /// Set max buffer length
+  Future<void> setMaxBufferLength(int textureId, Duration maxLength){
+    throw UnimplementedError('setMaxBufferLength() has not been implemented.');
+  }
 }
 
 class _PlaceholderImplementation extends VideoPlayerPlatform {}
